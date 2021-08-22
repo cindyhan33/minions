@@ -444,7 +444,7 @@ const string = `
     height: 400px;
     position: absolute;
     left: 50%;
-    top: 100px;
+    top:0;
     margin-left: -120px;
     border-radius: 115px;
     background: #f9d946;
