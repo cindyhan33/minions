@@ -9,17 +9,37 @@ const string = `
  *首先，画一个小黄人的身体
  */
   .skin {
-    border: 5px solid black;
-    width: 240px;
-    height: 400px;
     position: absolute;
     left: 50%;
-    top:0;
+    top: 100px;
+    width: 240px;
+    height: 400px;
+    border: 5px solid black;
     margin-left: -120px;
     border-radius: 115px;
     background: #f9d946;
     overflow: hidden;
   }
+/*
+ * 然后，画小黄人的头发
+ */
+.hair {
+  position: relative
+}
+.hair > div {
+  width: 130px;
+  height: 100px;
+  border-top: 8px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 90px;
+}
+.hair .left-hair {
+  left: 42%;
+}
+.hair .right-hair {
+  left: 48%;
+}
   /*
    *然后画小黄人的眼睛
    */
@@ -252,8 +272,8 @@ const player = {
   time: 50,
   n: 1,
   init: () => {
-    player.ui.demo.innerText = string.substr(0, player.n);
-    player.ui.demo2.innerHTML = string.substr(0, player.n);
+    player.ui.demo.innerText = string.substring(0, player.n);
+    player.ui.demo2.innerHTML = string.substring(0, player.n);
     player.bindEvents();
     player.play();
   },
@@ -272,8 +292,8 @@ const player = {
       window.clearInterval(player.id);
       return;
     }
-    player.ui.demo.innerText = string.substr(0, player.n);
-    player.ui.demo2.innerHTML = string.substr(0, player.n);
+    player.ui.demo.innerText = string.substring(0, player.n);
+    player.ui.demo2.innerHTML = string.substring(0, player.n);
     player.ui.demo.scrollTop = demo.scrollHeight;
   },
   play: () => {

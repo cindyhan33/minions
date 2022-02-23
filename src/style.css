@@ -24,6 +24,20 @@ body {
   background: #f9d946;
   overflow: hidden;
 }
+.hair > div {
+  width: 130px;
+  height: 100px;
+  border-top: 8px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 90px;
+}
+.hair .left-hair {
+  left: 42%;
+}
+.hair .right-hair {
+  left: 48%;
+}
 .eye {
   border: 5px solid black;
   width: 84px;
